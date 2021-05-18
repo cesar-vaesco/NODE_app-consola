@@ -1,28 +1,11 @@
 
-const fs = require('fs');
+
+const { crearArchivoTabla } = require('./helpers/multiplicar');
 
 console.clear();
 
-const base = 15;
-console.log('=======================');
-console.log(`Tabla del ${base}`);
-console.log('=======================');
+const base = 5;
 
-
-let salida = '';
-
-for (let index = 1; index <= 10; index++) {
-
-    salida += (`${base} * ${index} = ${base * index}\n`);
-
-}
-
-console.log(salida);
-
-fs.writeFile(`Tabla del ${base}`, salida, (err) => {
-
-    if (err) {
-        throw err;
-    }
-    console.log(`Tabla del ${base} creada...`);
-})
+crearArchivoTabla(base)
+    .then(nombreArchivo => console.log(nombreArchivo, 'creado'))
+    .catch(err => console.log(err));

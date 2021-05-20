@@ -27,7 +27,7 @@ const crearArchivoTabla = async (base = 5, listar = false) => {
 
         fs.writeFileSync(`Tabla-${base}.txt`, salida,);
 
-        return `tabla-${base}.txt creada`;
+        return `tabla-${base}.txt`;
     } catch (error) {
         throw error;
     }

@@ -6,6 +6,12 @@ const argv = require('yargs')
         demandOption: true,
         description: 'base para generar tabla de multiplicar'
     })
+    .option('h', {
+        alias: 'hasta',
+        type: 'number',
+        default: 10,
+        description: 'número de veces a multiplicar'
+    })
     .option('l', {
         alias: 'listar',
         type: 'boolean',
@@ -14,8 +20,8 @@ const argv = require('yargs')
     })
     .check((argv, options) => {
         //console.log('yargs', argv);
-        if (isNaN(argv.b)) {
-            throw 'La base tiene que ser un número';
+        if (isNaN(argv.b) && isNaN(argv.h)) {
+            throw 'La base o número de repeticiones tiene que ser un número';
         }
 
         return true;

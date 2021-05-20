@@ -11,6 +11,6 @@ console.clear();
 
 
 
-crearArchivoTabla(argv.b, argv.l)
+crearArchivoTabla(argv.b, argv.l, argv.h)
     .then(nombreArchivo => console.log(nombreArchivo, 'creada'.rainbow))
     .catch(err => console.log(err));

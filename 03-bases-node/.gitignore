@@ -1,6 +1,0 @@
-
-#Ignorando los archivos de salida de la aplicación
-/salida/*.txt
-
-#Ignorando módulos de node
-node_modules/

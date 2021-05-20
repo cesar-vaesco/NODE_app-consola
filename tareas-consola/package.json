@@ -1,0 +1,15 @@
+{
+  "name": "tareas-consola",
+  "version": "1.0.0",
+  "description": "Aplicación que permite registrar actividades desde consola",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "César Vargas Escorcia",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}

@@ -1,4 +1,4 @@
-
+const  Tarea =require('./tarea')
 
 class Tareas {
 
@@ -7,6 +7,13 @@ class Tareas {
     constructor() {
         this._listado = {};
     }
+
+    crearTareas( desc= '' ){
+        const tarea = new Tarea( desc );
+
+        this._listado[tarea.id] = tarea;
+    }
 }
+
 
 module.exports = Tareas;

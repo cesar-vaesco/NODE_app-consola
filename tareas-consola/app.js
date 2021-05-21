@@ -4,21 +4,21 @@ require('colors');
 const { inquirerMenu,
         pausa,
         leerInput } = require('./helper/inquirer');
+
 const Tareas = require('./models/tareas');
 
 
-console.clear();
+//console.clear();
 
 const main = async () => {
-    console.log('Hola mundo...');
 
     let opt = '';
     const tareas = new Tareas();
 
     do {
 
+        //Función que imprime el menú
         opt = await inquirerMenu();
-        console.log({ opt });
 
         switch (opt) {
             case '1':
@@ -27,7 +27,7 @@ const main = async () => {
                 tareas.crearTareas(desc);
                 break;
             case '2':
-                console.log(tareas._listado);
+                console.log(tareas.listadoArr);
                 break;
 
 
@@ -43,7 +43,5 @@ const main = async () => {
     //mostrarMenu();
 
 }
-
-
 
 main();

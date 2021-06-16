@@ -38,7 +38,7 @@ const menuOpts = [
             },
             {
                 value: '0',
-                name: `${'0.'.green} Salir`
+                name: `${'7.'.green} Salir`
             }
 
         ]

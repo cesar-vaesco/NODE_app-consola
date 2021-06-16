@@ -1,4 +1,4 @@
-const  Tarea =require('./tarea')
+const Tarea = require('./tarea')
 
 class Tareas {
 
@@ -6,11 +6,11 @@ class Tareas {
 
     get listadoArr() {
 
-        const listado =[];
+        const listado = [];
 
-        Object.keys(this._listado).forEach( key => {
-            const tarea = this._listado[ key ];
-            listado.push( tarea );
+        Object.keys(this._listado).forEach(key => {
+            const tarea = this._listado[key];
+            listado.push(tarea);
         });
 
         return listado;
@@ -20,8 +20,16 @@ class Tareas {
         this._listado = {};
     }
 
-    crearTareas( desc= '' ){
-        const tarea = new Tarea( desc );
+    cargarTareasFromArray(tareas = []) {
+
+        tareas.forEach(tarea => {
+            this._listado[tarea.id] = tarea;
+        })
+
+    }
+
+    crearTareas(desc = '') {
+        const tarea = new Tarea(desc);
 
         this._listado[tarea.id] = tarea;
     }

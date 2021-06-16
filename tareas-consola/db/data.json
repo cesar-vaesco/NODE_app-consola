@@ -1,12 +1,1 @@
-[
-    {
-        "id": "0f4f3526-c792-420a-8c1f-ddaab79513f7",
-        "desc": "Recolectar las piedras",
-        "completadoEn": null
-    },
-    {
-        "id": "5191ed25-e1d6-428a-b938-d33599ff7ea6",
-        "desc": "Comer",
-        "completadoEn": null
-    }
-]
+[{"id":"0f4f3526-c792-420a-8c1f-ddaab79513f7","desc":"Recolectar las piedras buenas","completadoEn":null},{"id":"5191ed25-e1d6-428a-b938-d33599ff7ea6","desc":"Comer","completadoEn":null},{"id":"15c85722-2270-4e60-b648-00292572ad7a","desc":"Alma","completadoEn":null},{"id":"746331d3-fa40-46b2-a3be-c9ced6ba7760","desc":"Poder","completadoEn":null},{"id":"c7c98269-41e1-4d68-b2a3-bb7a678fd802","desc":"Realidad","completadoEn":null},{"id":"cd3eb263-b05c-4c52-ba6a-f2cc5f378d80","desc":"Tiempo","completadoEn":null}]

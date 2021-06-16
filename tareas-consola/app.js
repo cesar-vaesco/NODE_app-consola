@@ -2,10 +2,12 @@
 require('colors');
 
 const { guardarDB, leerDB } = require('./helper/guardarArchivo');
-const { inquirerMenu,
+const {
+    inquirerMenu,
     listadoTareasBorrar,
     pausa,
-    leerInput } = require('./helper/inquirer');
+    leerInput,
+    confirmar } = require('./helper/inquirer');
 
 const Tareas = require('./models/tareas');
 
@@ -44,9 +46,19 @@ const main = async () => {
             case '4':
                 tareas.listarPendientesCompletadas(false)
                 break;
+            case '5':
+                console.log('Opción deshabilitada');
+                break;
             case '6':
-                const id = await listadoTareasBorrar(tareas.listadoArr)
-                console.log({ id });
+                const id = await listadoTareasBorrar(tareas.listadoArr);
+                if (id !== '0') {
+                    const ok = await confirmar('Estas seguro?');
+                    if (ok) {
+                        tareas.borrarTarea(id);
+                        console.log('Tarea borrada!'.red);
+                    }
+
+                }
                 break;
 
             default:

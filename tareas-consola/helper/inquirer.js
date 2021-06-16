@@ -7,7 +7,7 @@ const menuOpts = [
     {
         type: 'list',
         name: 'opcion',
-        message: `-- ${'¿'.green}Qué desea hacer${'?'.green} --\n`,
+        message: `-- ${'¿'.green}Qué desea hacer${'?'.green} -->`,
         choices: [
             {
                 value: '1',

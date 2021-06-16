@@ -10,3 +10,6 @@ Opciones:
   -h, --hasta    número de veces a multiplicar            [número] [defecto: 10]
   -l, --listar   Muestra tabla de multiplicar        [booleano] [defecto: false]
 ```
+
+####
+ Entrada de la aplicación  ->  node app,js

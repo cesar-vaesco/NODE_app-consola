@@ -20,6 +20,13 @@ class Tareas {
         this._listado = {};
     }
 
+
+    borrarTarea(id = '') {
+        if (this._listado) {
+            delete this._listado[id];
+        }
+    }
+
     cargarTareasFromArray(tareas = []) {
 
         tareas.forEach(tarea => {
@@ -60,13 +67,13 @@ class Tareas {
 
             if (completadas) {
                 if (completadoEn) {
-                    contador +=1;
+                    contador += 1;
                     console.log(` ${(contador + '.').green} ${desc} :: ${completadoEn.green}`);
                 }
             } else {
                 if (!completadoEn) {
                     contador += 1;
-                    console.log(` ${(contador+'.').green} ${desc} :: ${estado}`);
+                    console.log(` ${(contador + '.').green} ${desc} :: ${estado}`);
                 }
             }
 

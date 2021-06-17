@@ -7,7 +7,8 @@ const {
     listadoTareasBorrar,
     pausa,
     leerInput,
-    confirmar } = require('./helper/inquirer');
+    confirmar,
+    mostrarListadoChecklist } = require('./helper/inquirer');
 
 const Tareas = require('./models/tareas');
 
@@ -46,8 +47,9 @@ const main = async () => {
             case '4':
                 tareas.listarPendientesCompletadas(false)
                 break;
-            case '5':
-                console.log('Opción deshabilitada');
+            case '5': // Completado |  pendiente
+                const ids = await mostrarListadoChecklist(tareas.listadoArr);
+                console.log(ids);
                 break;
             case '6':
                 const id = await listadoTareasBorrar(tareas.listadoArr);

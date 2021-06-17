@@ -49,7 +49,7 @@ const main = async () => {
                 break;
             case '5': // Completado |  pendiente
                 const ids = await mostrarListadoChecklist(tareas.listadoArr);
-                console.log(ids);
+                tareas.toogleCompletadas(ids);
                 break;
             case '6':
                 const id = await listadoTareasBorrar(tareas.listadoArr);
@@ -59,7 +59,6 @@ const main = async () => {
                         tareas.borrarTarea(id);
                         console.log('Tarea borrada!'.red);
                     }
-
                 }
                 break;
 
